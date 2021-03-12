@@ -1,5 +1,5 @@
 # Web-Pages
-Several Webpages that was developed based on requirements.
+Several Webpages that was developed based on functional requirements.
 
 
 * Payment page that adds highlights to textbox when cliked on. Has bill payments forms with customer informations.
