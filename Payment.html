@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<style type="text/css">
+ h2,h3,h5,p,ul{
+  color: black;
+ }
+ p{
+  margin-bottom: 1em;
+ }
+ .jumbotron{
+  background-color: white;
+ }
+ .button {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #f72359;
+  padding: 1em 2em;
+  margin-left: 40px;"
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.button span {
+  position: relative;
+  pointer-events: none;
+}
+.button::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease;
+}
+.button:hover::before {
+  --size: 400px;
+}
+
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+.col-40 {
+  -ms-flex: 10%; /* IE10 */
+  flex: 10%;
+  margin-left: -40px;
+}
+.col-50 {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+}
+.col-60 {
+  -ms-flex: 10%; /* IE10 */
+  flex: 10%;
+    margin-left: -50px;
+
+}
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-40,
+.col-50,
+.col-60,
+.col-75 {
+  padding: 0 56px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+input[type=text] {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=text]:focus{       /* Styling that changes input box when clicked*/ 
+  outline: 2px solid red;     /* Red! yey */
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+footer{
+  background-color: #4269f5;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: -35px;: 
+}
+</style>
+
+
+<body>
+  <div class="jumbotron text-left">
+     <nav class="menu">
+  <h2> <a class="toggle-nav" style="color: black;" href="#">&#9776;</a> EXP|CON</h2>
+  <br><br>
+  <h3>PAYMENT</h3>
+    <br>
+  <p>1. Selct your Plan Test our app today! Choose from three subscription.</p> 
+  <p> &#9675; <h3 style="color: red;">BASIC</h3> &#x25CB; <h3 style="color: gold;">ADVANCED</h3> &#x25CB; <h3 style="color: lightblue;">PRO</h3> </p>
+</nav>
+</div>
+<div class="row">
+          <div class="col-50">
+            <h3>2.Billing Information</h3>
+            <label for="fname">FULL NAME</label>
+            <input type="text" id="fname" name="firstname" placeholder="Mathew Mozaff">
+            <label for="email">BILLING ADDRESS</label>
+            <input type="text" id="address" name="address" >
+            <label for="adr">Address</label>
+            <input type="text" id="adr" name="address">
+             <div class="row">
+              <div class="col-60">
+                <label for="state">CITY</label>
+                <input type="text" id="state" name="state">
+              </div>
+              <div class="col-60">
+                <label for="zip">POSTAL CODE</label>
+                <input type="text" id="zip" name="zip">
+              </div>
+            </div>
+          </div>     
+
+   <div class="col-50">
+            <h3>3.Credit Card Information</h3>
+            <label for="cname">CARDHOLDER'S NAME</label>
+            <input type="text" id="cname" name="cardname">
+            <label for="ccnum">CARD NUMBER</label>
+            <input type="text" id="ccnum" name="cardnumber">
+            <div class="row">
+              <div class="col-40">
+                <label for="state">EXPIRY MONTH</label>
+               <input list="browsers" name="browser">
+       <datalist id="browsers">
+          <option value="2020">
+          <option value="2021">
+       </datalist>
+  
+              </div>
+              <div class="col-40">
+                <label for="zip">EXPIRY YEAR</label>
+                <input list="browsers" name="browser" style="margin-right:-90px;">
+       <datalist id="browsers">
+          <option value="2020">
+          <option value="2021">
+       </datalist>
+              </div>
+            </div>
+            <label for="expmonth">CVV</label>
+            <input type="text" id="expmonth" name="expmonth">
+          </div>
+          </div>
+        </div>
+      <br>
+     <p> By continuing, i acknowledge that i've read and agree to the terms of service & Privacy Policy</p>
+       <button class="button">
+         <span>DOWNLOAD</span>
+       </button>
+    <script>document.querySelector('.button').onmousemove = function (e) 
+   {
+  var x = e.pageX - e.target.offsetLeft;
+  var y = e.pageY - e.target.offsetTop;
+
+  e.target.style.setProperty('--x', x + 'px');
+  e.target.style.setProperty('--y', y + 'px');
+   };
+     </script>
+    </div>
+</body>
+<br><br>
+<footer>
+    <h2 style="text-align: left;"> <a class="material-icons" style="color: white;" href="#"></a> support@experienceconcerts.co</h2>
+  <h2>EXP|CON</h2>
+  <h5>2019 @All rights reserved| Speer Technologies Incorporated</h5>
+</footer>
+</html>
+
